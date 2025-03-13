@@ -10,12 +10,20 @@ classDiagram
     Empresa <|-- Telefone
     Empresa <|-- Endereco
 
+    Funcionario <|-- Telefone
+    Funcionario <|-- Endereco
+
     Empresa : public string razaoSocial
     Empresa : public string nomeFantasia
     Empresa : public string cnpj
     Empresa : public Endereco endereco
-    Empresa : public funcionario[] funcionarios 
+    Empresa : public Funcionario[] funcionarios 
     class Funcionario {
+        public nome: string
+        public matricula: string
+        public cpf: string
+        public endereco: Endereco
+        public telefone: Telefone
         constructor
     }
     class Telefone {
