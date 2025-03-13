@@ -17,18 +17,30 @@ classDiagram
     Empresa : public string nomeFantasia
     Empresa : public string cnpj
     Empresa : public Endereco endereco
-    Empresa : public Funcionario[] funcionarios 
+    Empresa : public Funcionario[] funcionarios
+
+    Funcionario: public string nome
+    Funcionario: public string matricula
+    Funcionario: public string cpf
+    Funcionario: public Endereco endereco
+    Funcionario: public Telefone telefone
+
     class Funcionario {
-        public nome: string
-        public matricula: string
-        public cpf: string
-        public endereco: Endereco
-        public telefone: Telefone
-        constructor
+        constructor(string nome, st)
     }
+
+    Telefone: public string ddd
+    Telefone: public string numero
+
     class Telefone {
         constructor()
     }
+
+    Endereco: public number numero
+    Endereco: public string rua
+    Endereco: public string bairro
+    Endereco: public string cidade
+
     class Endereco {
         constructor()
     }
