@@ -25,24 +25,28 @@ classDiagram
     Funcionario: public Endereco endereco
     Funcionario: public Telefone telefone
 
-    class Funcionario {
-        constructor(string nome, st)
-    }
-
-    Telefone: public string ddd
-    Telefone: public string numero
-
-    class Telefone {
-        constructor()
-    }
-
     Endereco: public number numero
     Endereco: public string rua
     Endereco: public string bairro
     Endereco: public string cidade
 
+    Telefone: public string ddd
+    Telefone: public string numero
+
+    class Empresa{
+        constructor(Funcionario[] funcionarios, Endereco endereco, string razaoSocial, string nomeFantasia, string cnpj)
+    }
+
+    class Funcionario {
+        constructor(string nome, string matricula, string cpf, Endereco endereco, Telefone telefone)
+    }
+
+    class Telefone {
+        constructor(string ddd, string numero)
+    }
+
     class Endereco {
-        constructor()
+        constructor(number numero, string rua, string bairro, string cidade)
     }
 ```
 
