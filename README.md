@@ -4,6 +4,21 @@
 
 Atenção aos atributos de cada classe e seus tipos.
 
+```mermaid
+classDiagram
+    Animal <|-- Cachorro
+    Animal <|-- Gato
+    Animal : +String nome
+    Animal : +int idade
+    Animal : +fazerSom()
+    class Cachorro {
+        +latir()
+    }
+    class Gato {
+        +miar()
+    }
+```
+
 ## Faça o teu código funcionar!
 
 ```typescript
@@ -36,7 +51,7 @@ console.log(company.descritor())
 Crie um método para imprimir, no terminal, os atributos de uma empresa. Use o código como exemplo!
 
 ## Saída do console
-Razão Social: Netflix Entretenimento Brasil LTDA
+    Razão Social: Netflix Entretenimento Brasil LTDA
     Nome Fantasia: Netflix
     CNPJ: 13.590.585/0001
     Endereço:
