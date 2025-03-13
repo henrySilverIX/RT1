@@ -10,11 +10,11 @@ classDiagram
     Empresa <|-- Telefone
     Empresa <|-- Endereco
 
-    Empresa : public razaoSocial: string
-    Empresa : public nomeFantasia: string
-    Empresa : public cnpj: string
-    Empresa : public endereco: Endereco
-    Empresa : public funcionarios: funcionario[]
+    Empresa : public string razaoSocial
+    Empresa : public string nomeFantasia
+    Empresa : public string cnpj
+    Empresa : public Endereco endereco
+    Empresa : public funcionario[] funcionarios 
     class Funcionario {
         constructor
     }
