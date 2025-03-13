@@ -6,16 +6,23 @@ Atenção aos atributos de cada classe e seus tipos.
 
 ```mermaid
 classDiagram
-    Animal <|-- Cachorro
-    Animal <|-- Gato
-    Animal : +String nome
-    Animal : +int idade
-    Animal : +fazerSom()
-    class Cachorro {
-        +latir()
+    Empresa <|-- Funcionario
+    Empresa <|-- Telefone
+    Empresa <|-- Endereco
+
+    Empresa : public razaoSocial: string
+    Empresa : public nomeFantasia: string
+    Empresa : public cnpj: string
+    Empresa : public endereco: Endereco
+    Empresa : public funcionarios: funcionario[]
+    class Funcionario {
+        constructor
     }
-    class Gato {
-        +miar()
+    class Telefone {
+        constructor()
+    }
+    class Endereco {
+        constructor()
     }
 ```
 
