@@ -6,13 +6,13 @@ Atenção aos atributos de cada classe e seus tipos.
 
 ```mermaid
 classDiagram
-    Empresa <|-- Funcionario
-    Empresa "0..*" Funcionario
-    Empresa <|-- Telefone
-    Empresa <|-- Endereco
+    
+    Empresa "1" -- "0..*" Funcionario : possui >
+    Empresa "1" -- "0..*" Telefone : tem >
+    Empresa "1" -- "1" Endereco : localizada em >
 
-    Funcionario <|-- Telefone
-    Funcionario <|-- Endereco
+    Funcionario "1" -- "1" Endereco : reside em >
+    Funcionario "1" -- "1..*" Telefone : usa >
 
     Empresa : public string razaoSocial
     Empresa : public string nomeFantasia
