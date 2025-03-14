@@ -6,9 +6,9 @@ Atenção aos atributos de cada classe e seus tipos.
 
 ```mermaid
 classDiagram
-    direction LR
+    direction TB
 
-    
+
     Empresa "1" -- "0..*" Funcionario : possui
     Empresa "1" -- "0..*" Telefone : tem
     Empresa "1" -- "1" Endereco : localizada em
