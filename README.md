@@ -7,32 +7,40 @@ Atenção aos atributos de cada classe e seus tipos.
 ```mermaid
 classDiagram
     
-    Empresa "1" -- "0..*" Funcionario : possui >
-    Empresa "1" -- "0..*" Telefone : tem >
-    Empresa "1" -- "1" Endereco : localizada em >
+    Empresa "1" -- "0..*" Funcionario : possui
+    Empresa "1" -- "0..*" Telefone : tem
+    Empresa "1" -- "1" Endereco : localizada em
 
-    Funcionario "1" -- "1" Endereco : reside em >
-    Funcionario "1" -- "1..*" Telefone : usa >
+    Funcionario "1" -- "1" Endereco : reside em
+    Funcionario "1" -- "1..*" Telefone : usa
 
-    Empresa : public string razaoSocial
-    Empresa : public string nomeFantasia
-    Empresa : public string cnpj
-    Empresa : public Endereco endereco
-    Empresa : public Funcionario[] funcionarios
+    class Empresa {
+        +string razaoSocial
+        +string nomeFantasia
+        +string cnpj
+        +Endereco endereco
+        +Funcionario[] funcionarios
+    }
 
-    Funcionario: public string nome
-    Funcionario: public string matricula
-    Funcionario: public string cpf
-    Funcionario: public Endereco endereco
-    Funcionario: public Telefone telefone
+    class Funcionario {
+        +string nome
+        +string matricula
+        +string cpf
+        +Endereco endereco
+        +Telefone[] telefones
+    }
 
-    Endereco: public number numero
-    Endereco: public string rua
-    Endereco: public string bairro
-    Endereco: public string cidade
+    class Endereco {
+        +number numero
+        +string rua
+        +string bairro
+        +string cidade
+    }
 
-    Telefone: public string ddd
-    Telefone: public string numero
+    class Telefone {
+        +string ddd
+        +string numero
+    }
 
     class Empresa{
         constructor(Funcionario[] funcionarios, Endereco endereco, string razaoSocial, string nomeFantasia, string cnpj)
@@ -42,12 +50,12 @@ classDiagram
         constructor(string nome, string matricula, string cpf, Endereco endereco, Telefone telefone)
     }
 
-    class Telefone {
-        constructor(string ddd, string numero)
-    }
-
     class Endereco {
         constructor(number numero, string rua, string bairro, string cidade)
+    }
+
+    class Telefone {
+        constructor(string ddd, string numero)
     }
 ```
 
