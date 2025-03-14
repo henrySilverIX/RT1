@@ -64,10 +64,13 @@ classDiagram
 ## Faça o teu código funcionar!
 
 ```typescript
-import Empresa from "./models/Empresa";
-import Funcionario from "./models/Funcionario";
-import Endereco from "./models/Endereco";
-import Telefone from "./models/Telefone";
+import Descritor from "../models/descritorEmpresa"
+import Empresa from "../models/Empresa";
+import Funcionario from "../models/Funcionario";
+import Endereco from "../models/Endereco";
+import Telefone from "../models/Telefone";
+
+
 
 //Declaração das variáveis
 let end = new Endereco(194, "Rua das Rosas", "Jardim Florestal", "Nova Horizonte");
@@ -87,7 +90,9 @@ let telefones = [tel1, tel2];
 
 let company = new Empresa("Netflix Entretenimento Brasil LTDA", "Netflix", "13.590.585/0001", end, funcionarios);
 
-console.log(company.descritor())
+
+let descritor = new Descritor()
+descritor.descrever(company)
 ```
 
 Crie um método para imprimir, no terminal, os atributos de uma empresa. Use o código como exemplo!
@@ -104,3 +109,9 @@ Crie um método para imprimir, no terminal, os atributos de uma empresa. Use o c
     Matrícula: 164749813
     CPF: 764.419.481-84
     Rua: Avenida 13 de Março, Bairro: Jardim Industrial, Cidade: São Carlos, Número: 675
+
+
+    Nome: Ana
+    Matrícula: 68461385
+    CPF: 123.468.349-68
+    Rua: Rua das Rosas, Bairro: Jardim Florestal, Cidade: São Paulo, Número: 684
