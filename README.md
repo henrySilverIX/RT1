@@ -7,6 +7,7 @@ Atenção aos atributos de cada classe e seus tipos.
 ```mermaid
 classDiagram
     Empresa <|-- Funcionario
+    Empresa "0..*" Funcionario
     Empresa <|-- Telefone
     Empresa <|-- Endereco
 
