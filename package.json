@@ -1,15 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "CommonJS",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "out/",
-    "moduleResolution": "node",
-    "noImplicitAny": true
-  },
   "name": "rt1",
   "version": "1.0.0",
   "description": "",
